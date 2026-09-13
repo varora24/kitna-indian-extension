@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kitna Indian - how Indian is this product?</title>
+  <meta name="description" content="A Chrome extension that scores how Indian a product on Amazon.in or Flipkart is, broken down into manufacturing, assembly and design.">
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="wrap bar">
+      <a class="brand" href="./"><img src="img/logo.png" alt="">Kitna Indian</a>
+      <nav>
+        <a href="./" aria-current="page">Home</a>
+        <a href="support/">Support</a>
+        <a href="privacy/">Privacy</a>
+      </nav>
+    </div>
+    <div class="wrap hero">
+      <img src="img/logo.png" alt="Kitna Indian peacock feather logo">
+      <div>
+        <h1>Kitna Indian</h1>
+        <p class="tag">How Indian is this product?</p>
+        <p class="sub">A Chrome extension for Amazon.in and Flipkart. It gives a product a score out of 100 and shows how it got there, split into manufacturing, assembly and design.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p class="lead">A phone assembled in Tamil Nadu from imported displays and chips is not the same as a pressure cooker forged in Hosur. A yes/no "Made in India" label treats them the same. Kitna Indian doesn't.</p>
+
+    <figure>
+      <img src="img/screenshot-1.png" width="1280" height="800" alt="An Amazon.in product page with the Kitna Indian badge open, showing a score of 94 and the pillar breakdown">
+      <figcaption>On a product page: the score, each pillar, and the evidence behind it.</figcaption>
+    </figure>
+
+    <h2>How the score works</h2>
+    <div class="formula">Kitna Indian = 50% Manufacturing + 30% Assembly + 20% Design &amp; R&amp;D</div>
+    <div class="grid">
+      <div class="card"><h3>Manufacturing · 50%</h3><p>Where the components and raw materials are made.</p></div>
+      <div class="card"><h3>Assembly · 30%</h3><p>Where the final product is put together.</p></div>
+      <div class="card"><h3>Design &amp; R&amp;D · 20%</h3><p>Where the brand, IP and product design come from.</p></div>
+    </div>
+
+    <div class="table-scroll">
+      <table>
+        <tr><th>Score</th><th>Band</th></tr>
+        <tr><td>80-100</td><td><span class="band" style="background:#0f7a3d"></span>Strongly Indian</td></tr>
+        <tr><td>55-79</td><td><span class="band" style="background:#4f9a2f"></span>Substantially Indian</td></tr>
+        <tr><td>30-54</td><td><span class="band" style="background:#c47f18"></span>Mixed Origin</td></tr>
+        <tr><td>0-29</td><td><span class="band" style="background:#b3352c"></span>Largely Foreign</td></tr>
+        <tr><td>no data</td><td><span class="band" style="background:#6b7280"></span>Not Enough Data, instead of a made-up number</td></tr>
+      </table>
+    </div>
+
+    <h2>Search results too</h2>
+    <p>Every card in a search grid gets a small score, so you can spot the Indian options without opening ten tabs.</p>
+    <figure>
+      <img src="img/screenshot-2.png" width="1280" height="800" alt="An Amazon.in search results grid for pressure cookers with Kitna Indian score pills on each card">
+      <figcaption>A solid pill is measured. A dashed pill marked "est." is estimated from the brand, because search cards don't show country of origin.</figcaption>
+    </figure>
+
+    <h2>Where the numbers come from</h2>
+    <p>Signals are ranked by how far they can be trusted:</p>
+    <ol>
+      <li><strong>A curated list of 128 brands</strong> common in Indian shops. Each has figures for every pillar, a written reason, a source link and a confidence level.</li>
+      <li><strong>The Country of Origin</strong> declared on the listing.</li>
+      <li><strong>The manufacturer, packer or importer address.</strong> An Indian importer counts against a product, because it means the goods came from abroad.</li>
+      <li><strong>The GS1 barcode prefix.</strong> A weak signal, only ever used for the design pillar, and the badge says so.</li>
+    </ol>
+    <p>Pillar figures are researched estimates, not certified numbers. If a score looks wrong, use the <strong>Report incorrect info</strong> button on the badge, or see <a href="support/">Support</a>.</p>
+
+    <h2>Private by design</h2>
+    <div class="grid">
+      <div class="card"><h3>Two sites only</h3><p>Runs on amazon.in and flipkart.com, and nowhere else.</p></div>
+      <div class="card"><h3>No tracking</h3><p>No account, no analytics, and no server of its own. Scoring happens in your browser.</p></div>
+      <div class="card"><h3>No background loading</h3><p>It never opens product pages behind your back to fill in search results.</p></div>
+    </div>
+    <p>Read the full <a href="privacy/">privacy policy</a>.</p>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <span>Kitna Indian is an independent project, not affiliated with or endorsed by Amazon, Flipkart, or the Government of India's Make in India programme.</span>
+      <nav><a href="support/">Support</a><a href="privacy/">Privacy</a></nav>
+    </div>
+  </footer>
+</body>
+</html>

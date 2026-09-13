@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy - Kitna Indian</title>
+  <meta name="description" content="Privacy policy for the Kitna Indian Chrome extension.">
+  <link rel="icon" href="../img/favicon.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="wrap bar">
+      <a class="brand" href="../"><img src="../img/logo.png" alt="">Kitna Indian</a>
+      <nav>
+        <a href="../">Home</a>
+        <a href="../support/">Support</a>
+        <a href="./" aria-current="page">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: 13 September 2026</p>
+
+    <p>Kitna Indian is a Chrome extension that shows how Indian a product on Amazon.in or Flipkart is. This policy explains what the extension reads, what it stores, and where that data goes.</p>
+
+    <p class="lead"><strong>Short version: the extension has no server of its own. It collects no personal data, uses no analytics, and sends nothing to the developer or to anyone else.</strong></p>
+
+    <h2>What the extension reads</h2>
+    <p>The extension runs only on <code>amazon.in</code> and <code>flipkart.com</code> pages. On those pages it reads the product details already shown to you, such as the title, brand, country of origin, manufacturer or importer address, and barcode. It uses these to calculate a score in your browser.</p>
+    <p>It does not read any other website. It does not read your account details, order history, cart, payment information, addresses, or anything you type on those sites.</p>
+
+    <h2>What the extension stores</h2>
+    <p>Everything is kept in your browser's extension storage (<code>chrome.storage.local</code>) on your own device:</p>
+    <div class="table-scroll">
+      <table>
+        <tr><th>Data</th><th>Why</th><th>Limit</th></tr>
+        <tr><td>Scores for product pages you open (site, product ID, score, brand, pillar breakdown, time)</td><td>So a product you have already opened shows its measured score in search results later</td><td>The 800 most recent products</td></tr>
+        <tr><td>Corrections you choose to submit (reason, your note, product URL, title, brand, score, time)</td><td>So a correction isn't lost if the optional local API isn't running</td><td>The 200 most recent</td></tr>
+        <tr><td>Settings (whether the local API is on, and its address)</td><td>To remember your choice</td><td>-</td></tr>
+      </table>
+    </div>
+    <p>The developer cannot see any of this. To delete it, remove the extension, or clear its storage from <code>chrome://extensions</code>.</p>
+
+    <h2>Where data goes</h2>
+    <ul>
+      <li><strong>Nowhere by default.</strong> Scoring uses a brand dataset bundled with the extension, and nothing is sent over the network.</li>
+      <li><strong>The optional local API.</strong> Developers who run their own copy of the Kitna Indian API can let the extension use it. It is set to <code>http://127.0.0.1:8787</code>, an address on your own computer. If that API is running, the extension downloads the brand dataset from it, and sends it any correction you choose to submit. If it isn't running, the request fails straight away and nothing leaves your device. You can switch this off in the extension popup.</li>
+    </ul>
+    <p>The extension does not sell or share data, does not use it for advertising or credit decisions, and does not use it for anything except the feature described above.</p>
+
+    <h2>Remote code</h2>
+    <p>The extension runs no remotely hosted code. All of its JavaScript ships inside the extension package.</p>
+
+    <h2>Children</h2>
+    <p>The extension is not directed at children and collects no data from anyone.</p>
+
+    <h2>Changes</h2>
+    <p>If this policy changes, the updated version will be published at this address with a new "Last updated" date.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy: <a href="mailto:vaibhavarora2411@gmail.com">vaibhavarora2411@gmail.com</a></p>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <span>Kitna Indian is an independent project, not affiliated with Amazon, Flipkart, or the Government of India.</span>
+      <nav><a href="../">Home</a><a href="../support/">Support</a></nav>
+    </div>
+  </footer>
+</body>
+</html>
