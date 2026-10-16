@@ -22,15 +22,17 @@
 
   <main class="wrap">
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: 13 September 2026</p>
+    <p class="updated">Last updated: 16 October 2026</p>
 
-    <p>Kitna Indian is a Chrome extension that shows how Indian a product on Amazon.in or Flipkart is. This policy explains what the extension reads, what it stores, and where that data goes.</p>
+    <p>Kitna Indian is a Chrome extension that shows how Indian a product on Amazon.in, Flipkart, Blinkit or Zepto is. This policy explains what the extension reads, what it stores, and where that data goes.</p>
 
     <p class="lead"><strong>Short version: the extension has no server of its own. It collects no personal data, uses no analytics, and sends nothing to the developer or to anyone else.</strong></p>
 
     <h2>What the extension reads</h2>
-    <p>The extension runs only on <code>amazon.in</code> and <code>flipkart.com</code> pages. On those pages it reads the product details already shown to you, such as the title, brand, country of origin, manufacturer or importer address, and barcode. It uses these to calculate a score in your browser.</p>
-    <p>It does not read any other website. It does not read your account details, order history, cart, payment information, addresses, or anything you type on those sites.</p>
+    <p>The extension runs only on <code>amazon.in</code>, <code>flipkart.com</code> (including Flipkart Minutes), <code>blinkit.com</code> and <code>zepto.com</code> pages. On those pages it reads the product details already shown to you, such as the title, brand, country of origin, manufacturer or importer address, and barcode. It uses these to calculate a score in your browser.</p>
+    <p><strong>Your order history, only when you ask.</strong> On the "Your Orders" pages of Amazon.in and Flipkart the extension shows a panel with an "Add these orders to my profile" button. It reads nothing on those pages until you press it, or, if you tick "Add new orders automatically" (off unless you turn it on), until you open the page. Either way, it reads the name, product ID, order ID and order date of each item listed on that page, and scores them to build your Kitna Indian profile. It does not read prices, delivery addresses, payment details or anything else on the page, and it skips cancelled and refunded orders.</p>
+    <p>Blinkit and Zepto work the same way, one order at a time: their order list shows only pictures, so the button appears on each order's own page and reads the items in that order. Orders from all four stores count towards the same profile. Added orders are marked on the page with a green tick, which only you see. The extension cannot see orders you never open; it does not fetch order pages in the background.</p>
+    <p>It does not read any other website. It does not read your account details, cart, payment information, addresses, or anything you type on those sites.</p>
 
     <h2>What the extension stores</h2>
     <p>Everything is kept in your browser's extension storage (<code>chrome.storage.local</code>) on your own device:</p>
@@ -39,14 +41,19 @@
         <tr><th>Data</th><th>Why</th><th>Limit</th></tr>
         <tr><td>Scores for product pages you open (site, product ID, score, brand, pillar breakdown, time)</td><td>So a product you have already opened shows its measured score in search results later</td><td>The 800 most recent products</td></tr>
         <tr><td>Corrections you choose to submit (reason, your note, product URL, title, brand, score, time)</td><td>So a correction isn't lost if the optional local API isn't running</td><td>The 200 most recent</td></tr>
+        <tr><td>Items you added from your order history (site, product name, product ID, order ID, order date, brand, category, score, time added)</td><td>To show your Kitna Indian profile in the extension popup</td><td>The 3,000 most recent items</td></tr>
         <tr><td>Settings (whether the local API is on, and its address)</td><td>To remember your choice</td><td>-</td></tr>
+        <tr><td>A count of products scored, and whether you rated or dismissed the review request</td><td>To ask for a Chrome Web Store rating once, after you have used the extension for a while</td><td>-</td></tr>
       </table>
     </div>
-    <p>The developer cannot see any of this. To delete it, remove the extension, or clear its storage from <code>chrome://extensions</code>.</p>
+    <p>The developer cannot see any of this. Order history is never sent anywhere, including to the optional local API. To delete your order data, press "Clear order data" in the extension popup. To delete everything, remove the extension, or clear its storage from <code>chrome://extensions</code>.</p>
 
     <h2>Where data goes</h2>
     <ul>
       <li><strong>Nowhere by default.</strong> Scoring uses a brand dataset bundled with the extension, and nothing is sent over the network.</li>
+      <li><strong>Links you click.</strong> "More Indian alternatives" and profile swaps are plain search links on the site you are using (for example <code>https://www.amazon.in/s?k=...</code>). They carry no tracking or affiliate parameters, and nothing is sent unless you click one.</li>
+      <li><strong>Links in the popup.</strong> "Share" copies a link to the Chrome Web Store listing, "Support" opens a page on this site where Razorpay handles any payment, and the partnership address opens your email app. Store links carry <code>utm_source=extension</code> so the developer can see, in aggregate store statistics, how many installs came from shares. They carry nothing about you.</li>
+      <li><strong>When you remove the extension.</strong> Chrome opens a short page asking why, at <code>https://varora24.github.io/kitna-indian-extension/bye/</code>. The address contains only the extension version. Answering is optional, and goes by email.</li>
       <li><strong>The optional local API.</strong> Developers who run their own copy of the Kitna Indian API can let the extension use it. It is set to <code>http://127.0.0.1:8787</code>, an address on your own computer. If that API is running, the extension downloads the brand dataset from it, and sends it any correction you choose to submit. If it isn't running, the request fails straight away and nothing leaves your device. You can switch this off in the extension popup.</li>
     </ul>
     <p>The extension does not sell or share data, does not use it for advertising or credit decisions, and does not use it for anything except the feature described above.</p>
@@ -66,7 +73,7 @@
 
   <footer class="site">
     <div class="wrap">
-      <span>Kitna Indian is an independent project, not affiliated with Amazon, Flipkart, or the Government of India.</span>
+      <span>Kitna Indian is an independent project, not affiliated with Amazon, Flipkart, Blinkit, Zepto, or the Government of India.</span>
       <nav><a href="../">Home</a><a href="../support/">Support</a></nav>
     </div>
   </footer>

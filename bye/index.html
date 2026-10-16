@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sorry to see you go - Kitna Indian</title>
+  <meta name="description" content="Kitna Indian was removed. Tell us why in one click.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="../img/favicon.png">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .reasons { display: grid; gap: 10px; margin: 18px 0 28px; }
+    .reasons a { display: block; padding: 12px 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--card); color: inherit; text-decoration: none; }
+    .reasons a:hover { border-color: currentColor; }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap bar">
+      <a class="brand" href="../"><img src="../img/logo.png" alt="">Kitna Indian</a>
+      <nav>
+        <a href="../">Home</a>
+        <a href="../support/">Support</a>
+        <a href="../privacy/">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Kitna Indian has been removed</h1>
+    <p class="updated">Your scores, profile and settings were stored only on your device, and were deleted with the extension.</p>
+
+    <p>One click helps more than you would think. Why did you remove it?</p>
+    <div class="reasons" id="reasons">
+      <a data-r="Scores looked wrong">Scores looked wrong</a>
+      <a data-r="Too few products had a score">Too few products had a score</a>
+      <a data-r="The badge got in the way">The badge got in the way</a>
+      <a data-r="It stopped working on a site">It stopped working on a site</a>
+      <a data-r="I only wanted to try it">I only wanted to try it</a>
+      <a data-r="Something else">Something else</a>
+    </div>
+
+    <p>Each option opens a short email to <a href="mailto:contact@vaibhavarora.net">contact@vaibhavarora.net</a>. Add a line if you can, or just press send. Changed your mind? <a id="reinstall" href="https://chromewebstore.google.com/detail/kitna-indian/hgcpmgbclaajpdgnddapggcpckidifck?utm_source=uninstall&amp;utm_medium=bye_page">Reinstall Kitna Indian</a>.</p>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <span>Kitna Indian is an independent project, not affiliated with Amazon, Flipkart, Blinkit, Zepto, or the Government of India.</span>
+      <nav><a href="../">Home</a><a href="../privacy/">Privacy</a></nav>
+    </div>
+  </footer>
+
+  <script>
+    // The extension opens this page with ?v=<version> and nothing else.
+    var v = (new URLSearchParams(location.search).get('v') || '').replace(/[^0-9.]/g, '').slice(0, 12);
+    document.querySelectorAll('#reasons a').forEach(function (a) {
+      var r = a.getAttribute('data-r');
+      a.href = 'mailto:contact@vaibhavarora.net?subject=' + encodeURIComponent('Kitna Indian uninstall: ' + r + (v ? ' (v' + v + ')' : ''))
+        + '&body=' + encodeURIComponent('Reason: ' + r + '\n\nAnything else (optional):\n');
+    });
+  </script>
+</body>
+</html>
