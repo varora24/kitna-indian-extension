@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /bye/
+Sitemap: https://varora24.github.io/kitna-indian-extension/sitemap.xml
